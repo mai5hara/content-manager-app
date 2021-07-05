@@ -1,12 +1,14 @@
-import Navbar from "components/Navbar"
+import Navbar from 'components/Navbar';
+import ActiveResource from 'components/ActiveResource';
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      { children }
+      <ActiveResource />
+      {children}
     </>
-  )
-}
+  );
+};
 
 export default Layout;
