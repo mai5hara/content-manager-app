@@ -3,7 +3,7 @@ import ResourceForm from "components/ResourceForm";
 import axios from "axios";
 
 const ResourceEdit = ({ resource }) => {
-  const updateResouce = (formData) => {
+  const updateResource = (formData) => {
     axios.patch("/api/resources", formData)
       .then(_ => alert("data has been updated"))
       .catch(err => alert(err?.response?.data))
@@ -16,7 +16,7 @@ const ResourceEdit = ({ resource }) => {
           <div className="column is-8 is-offset-2">
             <ResourceForm
               initialData={resource}
-              onFormSubmit={updateResouce}
+              onFormSubmit={updateResource}
             />
           </div>
         </div>
