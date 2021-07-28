@@ -2,13 +2,12 @@
 import Layout from "components/Layout";
 import Link from "next/link";
 import axios from "axios";
-import ResourceLabel from '../../../components/ResourceLabel';
-import moment from 'moment';
+import ResourceLabel from "./components/ResourceLabel";
+import moment from "moment";
 
 const ResourceDetail = ({resource}) => {
 
   const activeResource = () => {
-    console.log({...resource, status: "active"})
     axios.patch("/api/resources", {...resource, status: "active"})
       .then(_ => location.reload())
       .catch(_ => alert("Cannot active the resource!"))
