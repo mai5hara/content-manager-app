@@ -2,7 +2,7 @@
 import Layout from "components/Layout";
 import Link from "next/link";
 import axios from "axios";
-import ResourceLabel from "./components/ResourceLabel";
+import ResourceLabel from "components/ResourceLabel";
 import moment from "moment";
 
 const ResourceDetail = ({resource}) => {
